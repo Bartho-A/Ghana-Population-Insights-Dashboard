@@ -1,4 +1,4 @@
-# :earth🇬🇭 Ghana Population Sashboard 
+# 🇬🇭 Ghana Population Sashboard 
 
 A simple Streamlit app showing the population of Ghana (national and regional) between the years 2000 and 2021.
 
