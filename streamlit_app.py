@@ -17,7 +17,7 @@ st.set_page_config(
 # Load Data
 @st.cache_data
 def load_data():
-    file_path = os.path.expanduser("~/Desktop/Projects/Practice/Streeamlit/Ghana_pop/ghana_population.csv")
+    file_path = os.path.expanduser("ghana_population.csv")
     df = pd.read_csv(file_path)
     return df
 
