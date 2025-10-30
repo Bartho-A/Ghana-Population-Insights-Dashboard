@@ -17,7 +17,8 @@ st.set_page_config(
 # Load Data
 @st.cache_data
 def load_data():
-    file_path = os.path.expanduser("ghana_population.csv")
+    # Relative path to the data folder
+    file_path = os.path.join("data", "ghana_population.csv")
     df = pd.read_csv(file_path)
     return df
 
