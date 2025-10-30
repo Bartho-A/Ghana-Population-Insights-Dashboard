@@ -75,14 +75,16 @@ tab_map, tab_heatmap, tab_trend = st.tabs(["Map", "Heatmap", "Trends"])
 # MAP: Regional Population
 with tab_map:
     st.subheader(f"Regional Population Map ({selected_year})")
+
     # Relative path to the geojson file
     geo_path = os.path.join("geojson", "gadm41_GHA_1.json")
-    try:
+
+    gh_geojson = None
+    if os.path.exists(geo_path):
         with open(geo_path, "r") as f:
             gh_geojson = json.load(f)
-    except FileNotFoundError:
-        st.error("GeoJSON file not found. Please check the path.")
-        gh_geojson = None
+    else:
+        st.error("GeoJSON file not found. Please check that 'geojson/gadm41_GHA_1.json' exists in your repo.")
 
     # Map region names to GeoJSON
     mapping = {
