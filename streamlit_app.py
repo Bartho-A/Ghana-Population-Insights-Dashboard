@@ -75,7 +75,8 @@ tab_map, tab_heatmap, tab_trend = st.tabs(["Map", "Heatmap", "Trends"])
 # MAP: Regional Population
 with tab_map:
     st.subheader(f"Regional Population Map ({selected_year})")
-    geo_path = os.path.expanduser("~/Desktop/Projects/Practice/Streeamlit/Ghana_pop/gadm41_GHA_1.json")
+    # Relative path to the geojson file
+    geo_path = os.path.join("geojson", "gadm41_GHA_1.json")
     try:
         with open(geo_path, "r") as f:
             gh_geojson = json.load(f)
