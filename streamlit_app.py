@@ -77,7 +77,7 @@ with tab_map:
     st.subheader(f"Regional Population Map ({selected_year})")
 
     # Relative path to the geojson file
-    geo_path = os.path.join("geojson", "gadm41_GHA_1.json")
+    geo_path = os.path.join("data", "gadm41_GHA_1.json")
 
     gh_geojson = None
     if os.path.exists(geo_path):
